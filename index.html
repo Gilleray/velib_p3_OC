@@ -1,0 +1,168 @@
+  <!DOCTYPE html>
+  <html lang="FR">
+    <head>
+        <meta charset="utf-8">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <title>Velib, réservation de v&eacute;los à Paris</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+
+    <body>
+    <div class="whole-container">
+
+<!-- HEADER  -->
+        <header id="header-nav">
+            <!-- NAVIGATION  -->
+            <div class="navbar-fixed" class="z-depth-2">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo">VELIB</a>
+                        <!-- insérer un logo vélo ??? -->
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#head-slider">Comment ça marche</a></li>
+                            <li><a href="#booking-infos">Carte des Velib</a></li>
+                            <li><a href="#booking-status">Votre réservation</a></li>
+                        </ul>
+    <!--
+                      <ul class="side-nav" id="mobile-demo">
+                        <li><a href="#head-slider">Comment ça marche</a></li>
+                        <li><a href="#booking-infos">Carte des Velib</a></li>
+                        <li><a href="#booking-status">Votre r&eacute;servation</a></li>
+                      </ul>
+    -->
+                </div>
+              </nav>
+            </div>
+        </header>
+<!-- SLIDER  -->
+<!--        <div><p>Les différentes étapes de votre réseervation</p></div>-->
+        <section id="head-slider" class="z-depth-2">
+             <!-- Containers SLIDER CONTENT -->
+            <div id="slider">
+                <div id="slides">
+<!--		        <img name="slide" width="1000px" height="500px">-->
+                    <img src="images/slide1.png" alt="information réservation Velib">
+                    <img src="images/slide2.png" alt="information réservation Velib">
+                    <img src="images/slide3.png" alt="information réservation Velib">
+                    <img src="images/slide4.png" alt="information réservation Velib">
+                    <img src="images/slide5.png" alt="information réservation Velib">
+                </div>
+                <div id="arrows">
+                    <div class="right-arrow"> + </div>
+         	        <div class="left-arrow"> + </div>
+         	    </div>
+            </div>
+        </section>
+
+<!-- MAP  -->
+
+    <!-- <div><p>Carte des stations Velib</p></div> -->
+        <main class="z-depth-4">
+            <div class="row z-depth-4" id="main-content">
+
+              <div class="col s12 m8 l9" id="map">
+                <!--
+                      This content will be:
+                  9-columns-wide on large screens,
+                  8-columns-wide on medium screens,
+                  12-columns-wide on small screens  -->
+
+              </div>
+
+    <!------------------- BOOKING INFORMATIONS -------------------->
+
+               <div class="col s12 m4 l3" id="booking-infos">
+
+                    <!--
+                            This content will be:
+                      3-columns-wide on large screens,
+                      4-columns-wide on medium screens,
+                      12-columns-wide on small screens  -->
+
+                <div class="z-depth-2 infos-window">
+                    <h4>Détails de la station: </h4>
+                    <p id="adresse"></p>
+                    <p id="statut"></p>
+                    <p id="nbVelib"></p>
+                    <p id="places"></p>
+                    <p id="velDispo"></p>
+                </div>
+              </div>
+            </div>
+        </main>
+
+<!------------ CANVAS ------------->
+
+<!--     <aside id="signing">-->
+
+<!--
+        <form>
+            <label for="firstname">Prénom</label>
+            <input type="text name="firstname" id="firstName" required></input>
+           <label for="lastname">Nom</label>
+            <input type="text name="lastname" id="lastName" required></input>
+        </form>
+-->
+
+<!--
+         <h3>Signature</h3>
+        <canvas id="canvas" width="400" height="400">
+           <form>
+            <input type="submit" value="Confirmer" id="confirm">
+            <input type="submit" value="Effacer" id="erase">
+            <input type="submit" value="Annuler" id="cancel">
+           </form>
+        </canvas>
+     </aside>
+-->
+
+<!-- BOOKING STATUS -->
+
+        <footer class="page-footer" id="booking-status">
+            <div class="container z-depth-2" >
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Statut de la réservation</h5>
+                        <p class="grey-text text-lighten-4">Il n'y a actuellement pas de réservation.</p>
+        <!--                <p>Annuler ma réservation</p>-->
+                        <!-- <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a> -->
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Votre réservation</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Station :</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Adresse : </a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">Temps restant : </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<!-- insérer une div "Votre signature" avec img  33% largeur row -->
+
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <p class="copyright">© 2017 Copyright Velib Ville de Paris</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      </div>   <!-- closes whole container -->
+      <script src="js/ajax.js"></script>
+      <script type="text/javascript" src="./js/materialize.js"></script> 
+      <script src="js/slider.js"></script>
+      <script src="js/marker.js"></script>
+      <script src="js/bookinginfos.js"></script>
+      <script src="js/canvas.js"></script>
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+      <script src="js/map.js"></script>
+      <!--GOOGLE MAP API-->
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDId0ZpJugQVonNSeFxiF4xsj-Bk-HGE7k&callback=initMap&libraries=places">
+      </script>
+    </body>
+  </html>
